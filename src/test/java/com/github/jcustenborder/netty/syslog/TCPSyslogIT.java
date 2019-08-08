@@ -32,7 +32,7 @@ import org.graylog2.syslog4j.SyslogIF;
 public class TCPSyslogIT extends SyslogIT {
   @Override
   protected int port() {
-    return 20000;
+    return 8088;
   }
 
   @Override

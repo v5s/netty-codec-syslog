@@ -26,6 +26,7 @@ class TestSyslogMessageHandler extends SimpleChannelInboundHandler<Message> {
 
   @Override
   protected void channelRead0(ChannelHandlerContext channelHandlerContext, Message message) throws Exception {
+    System.out.println(message);
     messages.add(message);
   }
 }

@@ -37,13 +37,13 @@ public class UDPSyslogIT extends SyslogIT {
 
   @Override
   protected int port() {
-    return 20001;
+    return 8088;
   }
 
   @Override
   protected SyslogIF syslogIF() {
     SyslogIF syslogIF = Syslog.getInstance("UDP");
-    syslogIF.getConfig().setHost("127.0.0.1");
+    syslogIF.getConfig().setHost(InetAddress.getLoopbackAddress().getHostAddress());
     syslogIF.getConfig().setPort(port());
     return syslogIF;
   }
